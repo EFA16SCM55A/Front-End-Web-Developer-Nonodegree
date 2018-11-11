@@ -5,8 +5,9 @@ By using the concept of map, filter, router in React, designing online library b
 
 
 ## Instruction to run the code:
- After creating the react app, there are node_modules have to be sure it is added (it install create-react-app and react-router-dom(this file will be installed separately, code will not run if it is not included)).Delete public file or replace it. 
-run the code by npm through node.js command prompt or similar command prompt 
+*After creating the react app, there are node_modules have to be sure it is added (install create-react-app and react-router-dom(this file will be installed separately, code will not run if it is not included)).
+*Delete public file and node_modules or replace them. 
+*Run the code by npm through node.js command prompt or similar command prompt 
 
 
 
