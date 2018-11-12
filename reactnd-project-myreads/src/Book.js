@@ -2,6 +2,26 @@ import React,{Component} from 'react'
 import BookHasNoPicture from './Book-Has-No-Picture.png';
 
 class Book extends Component {
+  /*To initialize state for Shelf and check if there is shelf assigned or make it none*/
+  constructor(props) {
+    super()
+    this.state = {
+      shelf: ''}}
+
+  componentDidMount = () => {
+    this.setState(
+      {shelf: this.props.book.shelf}
+      )
+  }
+  checkShelf=(shelf)=>{
+    if(shelf){
+      shelf=shelf
+    }
+    else{
+      shelf = 'none'
+    }
+    return shelf
+  }
 /*check if there is image, title, author for the book if not assigned,
  add indicator to the missing info. 
 Add book info and cover 
@@ -20,6 +40,10 @@ render() {
   const image=this.props.book.imageLinks.thumbnail
   const title=this.props.book.title
   const author=this.props.book.authors
+  const { book } = this.props;
+  const { shelf } = this.state;
+  const{changeShelf}=this.props;
+
     return(
       <li>
         <div className="book">
@@ -31,8 +55,8 @@ render() {
                  backgroundImage:`url("${image}")` } }>
             </div>
              <div className="book-shelf-changer">
-               <select onChange={(e)=>this.props.changeShelf(this.props.book, e.target.value)}
-               value={this.props.book.shelf}>
+               <select onChange={(e)=>changeShelf(book, e.target.value)}
+               value={this.checkShelf(shelf)}>
                <option value="move" disabled>Move to...</option>
                <option value="currentlyReading">Currently Reading</option>
                <option value="wantToRead">Want to Read</option>

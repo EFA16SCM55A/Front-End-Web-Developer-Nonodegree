@@ -15,13 +15,14 @@ class BooksApp extends React.Component {
   componentDidMount() {
     this.SetBook();
   }
+  /*To fix the first beg, I need to filter the array before adding it to shelf*/
  /*it will help to move book among shelves*/
   changeShelf = (bookModified, moveTo) => {
     BooksAPI.update(bookModified, moveTo).then(response => {
       bookModified.shelf = moveTo;
       this.setState(updatedBook => 
         (
-          {books: updatedBook.books.concat(bookModified)}
+          {books: updatedBook.books.filter(updatedBookId => updatedBookId.id !== bookModified.id).concat(bookModified)}
         )
         );
     });
@@ -36,7 +37,7 @@ class BooksApp extends React.Component {
       <div className="app">
       <BrowserRouter>
         <Switch>
-        <Route exact path="/" render={() => (
+        <Route exact path="/" render={({history}) => (
               <div className="list-books">
                 <BookCase 
                 books={this.state.books} 
