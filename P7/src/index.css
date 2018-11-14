@@ -1,0 +1,145 @@
+/*css for body, map, list, box search*/
+body {
+margin: 0;
+padding: 0;
+font-family: sans-serif;
+background-color: rgba(255, 255, 255, 0.8);
+text-align: center;
+font-family: "Times New Roman", Times, serif;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: 100vw;
+}
+
+
+#map {
+  height: 100vh;
+  width: 100vw;
+  grid-row-start: 2;
+  grid-column-start: 1;
+  margin-top: 0;
+}
+
+#listSection {
+  width: 30vw;
+  height: 100vh;
+  z-index: 5;
+  grid-row-start: 2;
+  grid-column-start: 1;
+  background-color: #ffffff;
+  overflow: scroll;
+  margin-top: 0;
+}
+.location {
+  list-style-type: none;
+  text-align: left;
+}
+.location li {
+  padding: 3px;
+}
+.categoriesList {
+  margin: 20px 0 0 0;
+  padding: 0;
+}
+.categoriesList li {
+  list-style-type: none;
+  margin: 20px 0 0 0;
+  display: inline-block;
+  border-radius: 3px;
+  padding: 3px;
+}
+.infowindow {
+  overflow: auto;
+  text-align: center;
+  margin: 0 auto 10px;
+  border-radius: 10px;
+}
+.infoBox {
+  color: #000000;
+}
+ .locationName {
+  text-align: center;
+  height: 40px;
+  font-size: 1.4em;
+  border-radius: 10px;
+  top: 0;
+  z-index: 10;
+}
+.container1 {
+    margin: 0 0 0 0;
+    padding: 0;
+    width: 35px;
+    height: 35px;
+}
+.container1 img {
+    width: 80%;
+    height: 80%;
+}
+.form-group {
+    position: relative;
+    padding-top: 1.5rem;
+}
+label {
+    position: relative;
+    top: 0;
+    font-size: var(--font-size-small);
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.2s ease-out;
+    margin-bottom: 0px;
+    color: DodgerBlue;
+
+
+}
+input:placeholder-shown + label {
+    position: relative;
+    opacity: 0;
+    transform: translateY(1rem);
+    
+}
+input{
+    float: center;
+    margin-top: 8px;
+    margin-bottom: 0px;
+    font-size: 17px;
+    width:96%;
+    border-style: solid;
+    border-color: rgba(201, 76, 76, 0.3);}
+
+    /*responsive css code*/
+  @media only screen and (max-width: 700px) {
+  h1 {
+    font-size: 2em;
+  }
+  body{
+    font-size: 10px;
+}
+input{
+    font-size: 9px;
+    width:95%;
+}
+  #listSection {
+    height: 50vh;
+    width: 50vw;
+    z-index: 5;
+  }
+
+  .location li{
+    margin-right: 13px;
+    margin-left: -9px;
+  }
+.container1 {
+    margin: 0 0 0 0;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+}
+
+.container1 img {
+    width: 60%;
+    height: 60%;
+}
+ }
+
