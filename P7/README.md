@@ -8,8 +8,8 @@ In this project, I implement  map app where anyone will be able to look for plac
  After creating the react app, there are node_modules have to be sure it is added (it install create-react-app and react-async-script-loader(this file will be installed separately, code will not run if it is not included)). 
 Please note, Google Map API provide me key to use with limit tries to use google map API as well as foursquare api so any problem appears will be because key from google API and/or client Id and client server from foursquare api; just replace them to go ahead with your own keys.
 Npm build run & serve -s build can be used to make sure of server worker 
-[Next phase](#Next phase)
-##contribution
+
+##contribution:
 https://medium.freecodecamp.org/how-to-build-a-pwa-with-create-react-app-and-custom-service-workers-376bd1fdc6d3
 ## Next phase:
 The design will be improved with new idea to use online marketing through map app in interesting way.
